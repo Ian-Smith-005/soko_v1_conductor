@@ -29,8 +29,9 @@ export default function OperatorTripLog() {
       {/* Header */}
       <div className="px-5 pt-6 pb-4 anim-fade-up">
         <h1 className="text-white text-xl font-bold tracking-tight">Trip Log</h1>
-        <p className="text-[#6B7280] text-sm mt-0.5">
+        <p className="text-[#6B7280] text-sm mt-0.5 flex items-center gap-1.5">
           {activeTrip ? `Trip #${activeTrip.tripNumber} · ${activeTrip.routeName}` : 'No active trip'}
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#F6DA61]" />
         </p>
       </div>
 

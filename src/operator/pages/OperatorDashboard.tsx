@@ -83,7 +83,10 @@ export default function OperatorDashboard() {
       {/* Top bar */}
       <div className="px-5 pt-6 pb-4 flex items-start justify-between anim-fade-up">
         <div>
-          <p className="text-[#6B7280] text-xs font-medium">{operator?.saccoName}</p>
+          <p className="text-[#6B7280] text-xs font-medium flex items-center gap-1.5">
+            {operator?.saccoName}
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#F6DA61]" />
+          </p>
           <h1 className="text-white text-xl font-bold mt-0.5 tracking-tight">{operator?.routeName}</h1>
         </div>
         <div className={`flex items-center gap-1.5 mt-1.5 px-3 py-1.5 rounded-full border transition-all ${

@@ -37,8 +37,8 @@ export default function OperatorProfile() {
 
       {/* Avatar */}
       <div className="flex flex-col items-center pb-6 px-5 anim-scale-in" style={{ animationDelay: '0.05s' }}>
-        <div className="w-24 h-24 rounded-3xl bg-[#97C459] flex items-center justify-center mb-4 glow-green">
-         <img src="/icons/icon-192.png" alt="Logo" srcset="" />
+        <div className="w-24 h-24 rounded-3xl bg-[#0F0F0F] border border-[#F6DA61]/30 flex items-center justify-center mb-4 glow-gold">
+         <img src="/icons/icon-192.png" alt="Logo" />
         </div>
         <p className="text-white text-xl font-bold tracking-tight">{operator?.saccoName ?? '—'}</p>
         <p className="text-[#6B7280] text-sm mt-1">{operator?.routeName}</p>

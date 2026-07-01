@@ -37,8 +37,8 @@ export default function OperatorRoute() {
       {/* Route card */}
       <div className="mx-5 mb-4 bg-[#141414] border border-[#1E1E1E] rounded-2xl p-5 anim-fade-up" style={{ animationDelay: '0.05s' }}>
         <div className="flex items-center gap-3 mb-5">
-          <div className="w-11 h-11 rounded-2xl bg-[#639922]/15 flex items-center justify-center">
-            <Navigation size={20} className="text-[#97C459]" />
+          <div className="w-11 h-11 rounded-2xl bg-[#F6DA61]/12 border border-[#F6DA61]/25 flex items-center justify-center">
+            <Navigation size={20} className="text-[#F6DA61]" />
           </div>
           <div>
             <p className="text-white font-bold">{route?.name ?? operator?.routeName}</p>

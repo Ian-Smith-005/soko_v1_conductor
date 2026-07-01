@@ -123,3 +123,11 @@
 
 /* Green glow */
 .glow-green { box-shadow: 0 0 24px rgba(151,196,89,0.3); }
+
+/* Gold glow (sampled from public/soko-logo.jpeg) */
+.glow-gold { box-shadow: 0 0 24px rgba(246,218,97,0.25); }
+
+/* Bottom-nav active-tab: glowing top indicator (proportional to the column) */
+.nav-indicator {
+  box-shadow: 0 0 10px rgba(151,196,89,0.55), 0 0 2px rgba(151,196,89,0.9);
+}

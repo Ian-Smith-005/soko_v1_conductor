@@ -16,23 +16,37 @@ export default function OperatorBottomNav() {
 
   return (
     <nav
-      className={`fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-[#111111] border-t border-[#222222] z-50 transition-transform duration-300 ${
+      className={`fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-[#0F0F0F]/95 backdrop-blur-md border-t border-[#1E1E1E] z-50 transition-transform duration-300 ${
         mounted ? 'translate-y-0' : 'translate-y-full'
       }`}
     >
-      <div className="flex items-center justify-around px-2 py-2 safe-pb">
+      <div className="flex items-stretch justify-around gap-1 px-2 pt-2 pb-1 safe-pb">
         {tabs.map(({ path, label, Icon }, i) => {
           const isActive = location.pathname === path
           return (
             <NavLink
               key={path}
               to={path}
-              className="flex flex-col items-center gap-1 px-3 py-2 rounded-xl min-w-[52px] relative"
+              className={`flex-1 flex flex-col items-center gap-1 py-2.5 rounded-2xl relative transition-all duration-200 ${
+                isActive
+                  ? 'bg-[#97C459]/10 text-[#97C459]'
+                  : 'text-[#6B7280] hover:text-[#9CA3AF]'
+              }`}
               aria-label={label}
               style={{ animationDelay: `${i * 0.05}s` }}
             >
+              {/* Proportional top indicator — spans the icon width, glowing */}
               <span
-                className={`transition-all duration-200 ${isActive ? 'text-[#97C459]' : 'text-[#4B5563]'}`}
+                className={`absolute top-0 left-1/2 -translate-x-1/2 h-[3px] rounded-full transition-all duration-300 ${
+                  isActive
+                    ? 'w-10 bg-[#97C459] nav-indicator'
+                    : 'w-0 bg-transparent'
+                }`}
+              />
+              <span
+                className={`transition-all duration-200 ${
+                  isActive ? 'scale-105' : 'scale-100'
+                }`}
               >
                 {path === '/dashboard' && isActive ? (
                   <span className="relative flex">
@@ -43,12 +57,13 @@ export default function OperatorBottomNav() {
                   <Icon size={20} />
                 )}
               </span>
-              <span className={`text-[10px] font-medium transition-colors duration-200 ${isActive ? 'text-[#97C459]' : 'text-[#4B5563]'}`}>
+              <span
+                className={`text-[10px] transition-all duration-200 ${
+                  isActive ? 'font-bold text-[#97C459]' : 'font-medium text-[#6B7280]'
+                }`}
+              >
                 {label}
               </span>
-              {isActive && (
-                <span className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-0.5 rounded-full bg-[#97C459] anim-scale-in" />
-              )}
             </NavLink>
           )
         })}
