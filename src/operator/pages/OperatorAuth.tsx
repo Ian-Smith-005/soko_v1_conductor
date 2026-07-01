@@ -51,7 +51,8 @@ export default function OperatorAuth() {
       {/* Logo */}
       <div className={`flex flex-col items-center mb-8 transition-all duration-500 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="w-20 h-20 rounded-3xl bg-[#97C459] flex items-center justify-center mb-4 glow-green">
-          <Bus size={36} className="text-[#173404]" />
+         
+          <img src="/icons/icon-192.png" alt="Logo" srcset="" />
         </div>
         <h1 className="text-2xl font-bold text-white tracking-tight">Soko Transit</h1>
         <p className="text-[#6B7280] text-sm mt-1">Conductor Platform</p>
